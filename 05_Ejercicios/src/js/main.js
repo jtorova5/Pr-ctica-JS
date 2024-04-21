@@ -280,6 +280,7 @@ let palabra = 'JavaScript'
 let testCadena = cadena.includes(palabra)
 
 console.groupCollapsed('Ejercicio 19: ')
+
 if (testCadena) {
     console.log(`La cadena de texto "${cadena}" contiene la palabra ${palabra}`)
 } else {
@@ -289,39 +290,217 @@ console.groupEnd()
 
 // 20. Determina si una cadena tiene más de 10 caracteres. 
 
-console.groupCollapsed('Ejercicio 1: ')
+let cadena2 = 'Bienvenido a Riwi'
+let limite3 = 10
+let testCadena2 = (cadena2.length > limite3)
+
+console.groupCollapsed('Ejercicio 20: ')
+
+if (testCadena2) {
+    console.log(`La cadena "${cadena2}" tiene más de ${limite3} caracteres`)
+} else {
+    console.log(`La cadena "${cadena2}" NO tiene más de ${limite3} caracteres`)
+}
+
 console.groupEnd()
+
 // 21. Verifica si una cadena de texto está en minúsculas. 
 
-console.groupCollapsed('Ejercicio 1: ')
+let cadena3 = 'minúsculas'
+let cadenaMin = cadena3.toLowerCase()
+let testCadena3 = (cadena3 == cadenaMin)
+
+console.groupCollapsed('Ejercicio 21: ')
+
+if (testCadena3) {
+    console.log(`La cadena "${cadena3}" está escrita en minúsculas`)
+} else {
+    console.log(`La cadena "${cadena3}" NO está escrita en minúsculas`)
+}
+
 console.groupEnd()
+
 // 22. Determina si una cadena de texto contiene al menos un número. 
 
-console.groupCollapsed('Ejercicio 1: ')
+let cadena4 = 'Html5'
+let bandera
+
+for (let i = 0; i <= cadena4.length; i += 1) {
+    if (!isNaN(cadena4[i])) {
+        bandera = true
+        break
+    }
+}
+
+console.groupCollapsed('Ejercicio 22: ')
+
+if (bandera) {
+    console.log(`La cadena ${cadena4} contiene por lo menos un número`)
+} else {
+    console.log(`La cadena ${cadena4} NO contiene números`)
+}
+
 console.groupEnd()
+
 // 23. Verifica si una cadena de texto termina con un punto (.). 
 
-console.groupCollapsed('Ejercicio 1: ')
+let cadena5 = 'Hola mundo.'
+let caracter = '.'
+let testCadena5 = (cadena5[(cadena5.length-1)] == caracter)
+
+console.groupCollapsed('Ejercicio 23: ')
+
+if (testCadena5) {
+    console.log(`La cadena "${cadena5}" termina con "${caracter}"`)
+} else {
+    console.log(`La cadena "${cadena5}" NO termina con "${caracter}"`)
+} 
+
 console.groupEnd()
+
 // 24. Determina si una cadena de texto es un pangrama (contiene todas las letras del alfabeto). 
 
-console.groupCollapsed('Ejercicio 1: ')
+let cadena6 = 'abcdefghijklmnñopqrstuvwxyz'
+let alfabeto = 'abcdefghijklmnñopqrstuvwxyz'.split('')
+let testCadena6 = alfabeto.every(letra => cadena6.includes(letra))
+
+console.groupCollapsed('Ejercicio 24: ')
+
+if (testCadena6) {
+    console.log(`La cadena "${cadena6}" es un pangrama`)
+} else {
+    console.log(`La cadena "${cadena6}" NO es un pangrama`)
+}
+
 console.groupEnd()
+
 // 25. Verifica si un día de la semana es laborable (de lunes a viernes). 
 
-console.groupCollapsed('Ejercicio 1: ')
+let dia = 'martes'
+
+console.groupCollapsed('Ejercicio 25: ')
+
+switch (dia.toLowerCase()) {
+        case 'lunes':
+            console.log(`El día ${dia} es laborable`)
+            break
+        case 'martes':
+            console.log(`El día ${dia} es laborable`)
+            break
+        case 'miercoles':
+            console.log(`El día ${dia} es laborable`)
+            break
+        case 'jueves':
+            console.log(`El día ${dia} es laborable`)
+            break
+        case 'viernes':
+            console.log(`El día ${dia} es laborable`)
+            break
+        case 'sabado':
+            console.log(`El día ${dia} NO es laborable`)
+            break
+        case 'domingo':
+            console.log(`El día ${dia} NO es laborable`)
+            break
+        default:
+            console.log('Día de la semana no válido')
+    }
+
 console.groupEnd()
+
 // 26. Determina si un día es fin de semana (sábado o domingo). 
 
-console.groupCollapsed('Ejercicio 1: ')
+let dia2 = 'domingo'
+
+console.groupCollapsed('Ejercicio 26: ')
+
+switch (dia2.toLowerCase()) {
+        case 'lunes':
+            console.log(`El día ${dia2} NO es fin de semana`)
+            break
+        case 'martes':
+            console.log(`El día ${dia2} NO es fin de semana`)
+            break
+        case 'miercoles':
+            console.log(`El día ${dia2} NO es fin de semana`)
+            break
+        case 'jueves':
+            console.log(`El día ${dia2} NO es fin de semana`)
+            break
+        case 'viernes':
+            console.log(`El día ${dia2} NO es fin de semana`)
+            break
+        case 'sabado':
+            console.log(`El día ${dia2} es fin de semana`)
+            break
+        case 'domingo':
+            console.log(`El día ${dia2} es fin de semana`)
+            break
+        default:
+            console.log('Día de la semana no válido')
+    }
+
 console.groupEnd()
+
 // 27. Verifica si un número representa un mes válido (del 1 al 12). 
 
-console.groupCollapsed('Ejercicio 1: ')
+let numMes = 1
+
+console.groupCollapsed('Ejercicio 27: ')
+
+switch (numMes) {
+        case 1:
+            console.log(`El número ${numMes} representa al mes de enero`)
+            break
+        case 2:
+            console.log(`El número ${numMes} representa al mes de febrero`)
+            break
+        case 3:
+            console.log(`El número ${numMes} representa al mes de marzo`)
+            break
+        case 4:
+            console.log(`El número ${numMes} representa al mes de abril`)
+            break
+        case 5:
+            console.log(`El número ${numMes} representa al mes de mayo`)
+            break
+        case 6:
+            console.log(`El número ${numMes} representa al mes de junio`)
+            break
+        case 7:
+            console.log(`El número ${numMes} representa al mes de julio`)
+            break
+        case 8:
+            console.log(`El número ${numMes} representa al mes de agosto`)
+            break
+        case 9:
+            console.log(`El número ${numMes} representa al mes de septiembre`)
+            break
+        case 10:
+            console.log(`El número ${numMes} representa al mes de octubre`)
+            break
+        case 11:
+            console.log(`El número ${numMes} representa al mes de noviembre`)
+            break
+        case 12:
+            console.log(`El número ${numMes} representa al mes de diciembre`)
+            break
+        default:
+            console.log(`El número ${numMes} NO representa ningún mes del año`)
+    }
+
 console.groupEnd()
+
 // 28. Determina si una hora está en el rango de 9 AM a 6 PM. 
 
-console.groupCollapsed('Ejercicio 1: ')
+// let hora = 10
+// let horaAM = (hora < 12)
+// let formato24H = hora % 12
+// let testHora = ((hora >= 9) && (hora <= 11))
+
+console.groupCollapsed('Ejercicio 28: ')
+
+
 console.groupEnd()
 // 29. Verifica si una persona es mayor de 65 años o menor de 18 años. 
 
