@@ -104,8 +104,42 @@ Por favor ingresar un número para obtener su tabala de multiplicar:
 console.groupCollapsed('Ejercicio 3: ')
 
 for (let i = 1; i <= 10; i += 1) {
-    console.log(`${num6} * ${i} = ${num6 * i}`)
+    let result = (num6 * i).toString()
+    console.log(`${num6} * ${i} = ${result}`)
 }
 
 console.groupEnd()
 
+// Ejercicio 4
+
+/*
+Crea un programa que pida al usuario su edad y la 
+cantidad de horas de sueño diarias. Utiliza una estructura de control if-else con 
+operadores lógicos para determinar si la persona es mayor de edad (más de 18 
+años) y si duerme lo suficiente (más de 7 horas). Utiliza el Método Math para 
+redondear la cantidad de horas de sueño y muestra un mensaje en consola 
+indicando si la persona tiene un buen equilibrio entre edad y descanso
+*/
+
+let age = parseInt(prompt(`Ejercicio 4 - Calculadora de sueño
+
+
+Por favor ingrese su edad: `))
+let sleepingHours = Math.round(parseInt(prompt(`Ejercicio 4 - Calculadora de sueño
+
+
+Ingrese la cantidad de horas que destina para dormir: `)))
+
+console.groupCollapsed('Ejercicio 4: ')
+
+if ((age >= 18) && (sleepingHours >= 7)) {
+    console.log(`Eres mayor de edad y tienes un buen equilibrio entre tu edad y el descanso`)
+} else if ((age >= 18) && (sleepingHours < 7)) {
+    console.log(`Eres mayor de edad pero NO tienes un buen equilibrio entre tu edad y el descanso`)
+} else if ((age < 18) && (sleepingHours >= 7)) {
+    console.log(`NO eres mayor de edad pero tienes un buen equilibrio entre tu edad y el descanso`)
+} else {
+    console.log(`NO eres mayor de edad y NO tienes un buen equilibrio entre tu edad y el descanso`)
+}
+
+console.groupEnd()
