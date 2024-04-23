@@ -223,3 +223,97 @@ console.groupCollapsed('Ejercicio 6: ')
 console.log(`La sumatoria de números impares hasta el ${odd} es: ${aux}`)
 
 console.groupEnd()
+
+// Ejercicio 7
+
+/*
+Crea un programa que solicite al usuario ingresar un 
+número decimal. Utiliza una estructura if-else con operadores de asignación para 
+redondear el número hacia abajo utilizando el método Math.floor() y luego 
+convierte el resultado a un número entero utilizando Number.parseInt. Muestra 
+el número original y el número redondeado en consola
+*/
+
+let  decimalNumber = parseFloat(prompt(`Ejercicio 7 - Decimal / entero
+
+
+Por favor escriba un número decimal: `))
+
+let convertedNumber = Number.parseInt(Math.floor(decimalNumber))
+
+console.groupCollapsed('Ejercicio 7: ')
+
+console.log(`Número original: ${decimalNumber}
+Número convertido ${convertedNumber}`)
+
+console.groupEnd()
+
+// Ejercicio 8
+
+/*
+Desarrolla un programa que pida al usuario una frase y 
+utilice un switch case para realizar diferentes operaciones en la frase. 
+Dependiendo de la opción seleccionada (por ejemplo, 1 para convertir a 
+mayúsculas, 2 para reemplazar espacios con guiones, etc.), realiza la operación 
+correspondiente y muestra el resultado en consola. Utiliza Number.parseInt para 
+manejar las opciones ingresadas por el usuario
+*/
+
+let  sentence = prompt(`Ejercicio 8 - Modificar frase
+
+
+Por favor escriba una frase: `)
+let  option = parseInt(prompt(`Ejercicio 8 - Modificar frase
+
+Opciones disponibles:
+
+    1. Convertir a mayúsculas
+    2. Convertir a minúsculas
+    3. Poner "-" en los espacios
+
+Por favor ingresar el número de la opción deseada:`))
+
+console.groupCollapsed('Ejercicio 8: ')
+
+switch (option) {
+    case 1:
+        sentence = sentence.toUpperCase()
+        console.log(`${sentence}`)
+        break
+    case 2:
+        sentence = sentence.toLowerCase()
+        console.log(`${sentence}`)
+        break
+    case 3:
+        sentence = sentence.split(' ').join('-')
+        console.log(`${sentence}`)
+        break
+    default:
+        console.log(`Ingresar una opción válida`)
+        break
+}
+
+// Ejercicio 9
+
+/*
+Implementa un programa que solicite al usuario ingresar 
+una palabra. Utiliza un bucle for para alternar entre caracteres en mayúsculas y 
+minúsculas en la palabra. Utiliza operadores de asignación como toUpperCase() y 
+toLowerCase() para cambiar el caso de cada caracter en cada iteración del bucle. 
+Muestra el resultado en consola
+*/
+
+let  word = prompt(`Ejercicio 9 - Intercambiar palabra
+
+
+Por favor escriba una palabra: `)
+
+for (let i = 0; i < word.length; i += 1) {
+    if (i % 2 == 0) {
+        word[i] = word[i].toUpperCase()
+    } else if (i % 2 != 0) {
+        word[i] = word[i].toLowerCase()
+    }
+}
+
+console.log(`${word}`)
