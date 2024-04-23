@@ -143,3 +143,83 @@ if ((age >= 18) && (sleepingHours >= 7)) {
 }
 
 console.groupEnd()
+
+// Ejercicio 5
+
+/*
+Desarrolla un programa que solicite al usuario un día de 
+la semana (por ejemplo, "lunes"). Utiliza un switch case con operadores lógicos 
+para determinar si el día ingresado es un día laboral (de lunes a viernes) o un fin 
+de semana (sábado o domingo). Luego, utiliza los métodos substring y slice de 
+string para mostrar un mensaje en consola indicando si es un día hábil o de 
+descanso
+*/
+
+let weekDay = prompt(`Ejercicio 5 - Días de la semana
+
+
+Por favor escriba un día de la semana: `).toLowerCase()
+
+console.groupCollapsed('Ejercicio 5: ')
+
+switch (weekDay) {
+    case 'lunes':
+        console.log(`El ${weekDay} es un día laboral`)
+        break
+    case 'martes':
+        console.log(`El ${weekDay} es un día laboral`)
+        break
+    case 'miercoles':
+        console.log(`El ${weekDay} es un día laboral`)
+        break
+    case 'miércoles':
+        console.log(`El ${weekDay} es un día laboral`)
+        break
+    case 'jueves':
+        console.log(`El ${weekDay} es un día laboral`)
+        break
+    case 'viernes':
+        console.log(`El ${weekDay} es un día laboral`)
+        break
+    case 'sabado':
+        console.log(`El ${weekDay} es fin de semana`)
+        break
+    case 'sábado':
+        console.log(`El ${weekDay} es fin de semana`)
+        break
+    case 'domingo':
+        console.log(`El ${weekDay} es fin de semana`)
+        break
+    default:
+        console.log(`Ojo, día inexistente (${weekDay})`)
+}
+
+console.groupEnd()
+
+// Ejercicio 6
+
+/*
+Implementa un programa que solicite al usuario ingresar 
+un número. Utiliza un bucle for para encontrar la suma de todos los números 
+impares hasta el número ingresado. Además, utiliza operadores lógicos para 
+identificar números impares y el Método Math para realizar cálculos. Muestra el 
+resultado en consola
+*/
+
+let  odd = prompt(`Ejercicio 6 - Suma de impares
+
+
+Por favor escriba un número: `)
+
+let aux = 0
+
+for (let i = 1; i <= odd; i += 1) {
+    if (i % 2 != 0) {
+        aux += i
+    }
+}
+console.groupCollapsed('Ejercicio 6: ')
+
+console.log(`La sumatoria de números impares hasta el ${odd} es: ${aux}`)
+
+console.groupEnd()
