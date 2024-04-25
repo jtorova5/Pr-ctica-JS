@@ -288,6 +288,19 @@ duplicados2.forEach(numero => {
     }
 })
 
+// duplicados2.forEach(numero => {
+//     let duplicado = false
+//     for (let i = 0; i < sinDuplicados.length; i++) {
+//         if (sinDuplicados[i] === numero) {
+//             duplicado = true;
+//             break
+//         }
+//     }
+//     if (!duplicado) {
+//         sinDuplicados.push(numero)
+//     }
+// })
+
 console.groupCollapsed('Ejercicio 24: ')
 
 console.log('Duplicados:', duplicados2)
