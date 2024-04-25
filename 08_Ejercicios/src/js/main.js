@@ -292,7 +292,7 @@ duplicados2.forEach(numero => {
 //     let duplicado = false
 //     for (let i = 0; i < sinDuplicados.length; i++) {
 //         if (sinDuplicados[i] === numero) {
-//             duplicado = true;
+//             duplicado = true
 //             break
 //         }
 //     }
